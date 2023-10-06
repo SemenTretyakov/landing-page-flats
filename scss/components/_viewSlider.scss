@@ -1,0 +1,21 @@
+.view-slider {
+	position: relative;
+	.swiper {
+		display: flex;
+		position: absolute;
+		width: 100%;
+		height: 805px;
+
+		// display: flex;
+		// justify-content: center;
+	}
+	.slide1 {
+		@include slideView(var(--bg-url1));
+	}
+	.slide2 {
+		@include slideView(var(--bg-url2));
+	}
+	.slide3 {
+		@include slideView(var(--bg-url3));
+	}
+}

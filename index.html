@@ -5,6 +5,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Estes</title>
 		<link rel="stylesheet" href="css/app.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+		/>
 	</head>
 	<body>
 		<div class="container-big">
@@ -130,19 +134,24 @@
 				<section class="location">
 					<div class="location__subtitle">Престижное расположение</div>
 					<h2 class="section-title location__title">
-						Один из самых зелёных районов столицы — <span>Раменки</span>
+						Один из самых зелёных районов столицы —
+						<big class="border-decor">Раменки</big>
 					</h2>
-					<img src="" alt="" class="location__map" />
-					<div class="location__info">
-						<p class="location__text">
+					<img src="./assets/images/map.svg" alt="map" class="location__map" />
+					<figure class="location__info">
+						<figcaption class="location__text">
 							ЖК West Garden окружен Матвеевским лесом, набережной реки Раменки
 							и природным заказником «Долина реки Сетунь»
-						</p>
-						<button class="location__btn">
-							<img src="" alt="" class="location__btn-icon" />
-							Панорама района 360˚
-						</button>
-					</div>
+						</figcaption>
+					</figure>
+					<button class="location__btn">
+						<img
+							src="./assets/images/panorama.svg"
+							alt=""
+							class="location__btn-icon"
+						/>
+						Панорама района 360˚
+					</button>
 				</section>
 			</div>
 
@@ -150,15 +159,26 @@
 				<h2 class="section-title view-slider__title">
 					Наслаждайтесь видами из окон своей квартиры
 				</h2>
-				<div class="view-slider__slider slider">
-					<button class="slider__arrow-left"><</button>
-					<button class="slider__arrow-left">></button>
-					<div class="view-slider__slider-tabs">
-						<button class="view-slider__slider-tab">Поклонная гора</button>
-						<button class="view-slider__slider-tab">Москва Сити</button>
-						<button class="view-slider__slider-tab">Матвеевский лес</button>
-						<button class="view-slider__slider-tab">Район раменки</button>
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<div
+							class="swiper-slide slide1"
+							style="--bg-url1: url('../../assets/images/city.webp')"
+						></div>
+						<div
+							class="swiper-slide slide2"
+							style="--bg-url2: url('../../assets/images/city.webp')"
+						></div>
+						<div
+							class="swiper-slide slide3"
+							style="--bg-url3: url('../../assets/images/city.webp')"
+						></div>
 					</div>
+
+					<div class="swiper-pagination"></div>
+
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
 				</div>
 			</section>
 			<section class="presentation">
@@ -259,5 +279,21 @@
 				</div>
 			</section>
 		</main>
+		<script type="module">
+			import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs';
+
+			const swiper = new Swiper('.swiper', {
+				direction: 'horizontal',
+				loop: true,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+		</script>
 	</body>
 </html>

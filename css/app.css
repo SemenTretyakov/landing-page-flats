@@ -144,8 +144,7 @@ legend {
   justify-content: center;
 }
 .hero-section__title {
-  margin-top: 1rem;
-  text-wrap: wrap;
+  color: #1a1a1a;
   text-align: center;
   font-family: "TT Travels";
   font-size: 64px;
@@ -153,6 +152,8 @@ legend {
   font-weight: 700;
   letter-spacing: -3px;
   max-width: 920px;
+  text-wrap: wrap;
+  margin-top: 1rem;
 }
 .hero-section__subtitle p {
   margin-top: 24px;
@@ -307,6 +308,134 @@ legend {
   font-weight: 400;
   line-height: 26px;
   letter-spacing: -0.2px;
+}
+
+.location {
+  margin-top: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.location__subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-wrap: nowrap;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  color: #1a1a1a;
+  text-align: center;
+  font-family: "TT Travels";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 1.92px;
+  text-transform: uppercase;
+}
+.location__subtitle::before {
+  content: "";
+  min-width: 100%;
+  display: block;
+  height: 1px;
+  background-color: #eae3d9;
+}
+.location__subtitle::after {
+  content: "";
+  min-width: 100%;
+  display: block;
+  height: 1px;
+  background-color: #eae3d9;
+}
+.location__title {
+  color: #1a1a1a;
+  text-align: center;
+  font-family: "TT Travels";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -3px;
+  max-width: 950px;
+  text-wrap: wrap;
+}
+.location .border-decor {
+  position: relative;
+  font-size: inherit;
+}
+.location .border-decor::after {
+  content: url("../../assets/images/line.svg");
+  display: block;
+  top: 13px;
+  left: 10px;
+  position: absolute;
+}
+.location__map {
+  margin: 50px 0 20px;
+}
+.location__info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.location__info .location__text {
+  font-family: "Helvetica Neue";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: -0.2px;
+  text-align: center;
+  max-width: 620px;
+  color: #1a1a1a;
+}
+.location__btn {
+  margin-top: 20px;
+  display: flex;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(119, 56, 68, 0.2);
+  color: #1f2057;
+  font-family: "Helvetica Neue";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.view-slider {
+  position: relative;
+}
+.view-slider .swiper {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 805px;
+}
+.view-slider .slide1 {
+  width: 100%;
+  margin-top: 50px;
+  background-image: var(--bg-url1);
+  background-repeat: no-repeat;
+  background-size: 100%, cover;
+  background-position: center center;
+}
+.view-slider .slide2 {
+  width: 100%;
+  margin-top: 50px;
+  background-image: var(--bg-url2);
+  background-repeat: no-repeat;
+  background-size: 100%, cover;
+  background-position: center center;
+}
+.view-slider .slide3 {
+  width: 100%;
+  margin-top: 50px;
+  background-image: var(--bg-url3);
+  background-repeat: no-repeat;
+  background-size: 100%, cover;
+  background-position: center center;
 }
 
 .header {
