@@ -1,0 +1,18 @@
+@mixin cardInfo($var) {
+	background-image: $var;
+	background-repeat: no-repeat;
+	background-size: 100%, cover;
+	height: 320px;
+	border-radius: 12px;
+	position: relative;
+}
+
+@mixin backgrText {
+	border-radius: 5px;
+	background: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(8px);
+	display: flex;
+	padding: 6px 10px;
+	align-items: flex-start;
+	gap: 10px;
+}

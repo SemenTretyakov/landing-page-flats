@@ -1,0 +1,54 @@
+.gallery {
+	margin-top: 80px;
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		gap: 1.25rem;
+	}
+
+	.card1 {
+		@include cardInfo(var(--bg-url1));
+	}
+	.card2 {
+		@include cardInfo(var(--bg-url2));
+	}
+	.card3 {
+		@include cardInfo(var(--bg-url3));
+	}
+	.card4 {
+		@include cardInfo(var(--bg-url4));
+	}
+	.card-info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		row-gap: 3px;
+		position: absolute;
+		bottom: 15px;
+		left: 15px;
+		color: $white;
+
+		&__text {
+			@include backgrText;
+		}
+
+		&__text-big {
+			font-family: 'TT Travels';
+			font-size: 28px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 32px;
+			letter-spacing: -0.56px;
+		}
+
+		&__text-small {
+			font-family: 'Helvetica Neue';
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 26px;
+			letter-spacing: -0.2px;
+		}
+	}
+}

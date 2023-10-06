@@ -1,9 +1,5 @@
 .hero-section {
 	margin-top: 65px;
-	// display: flex;
-	// flex-direction: column;
-	// align-items: center;
-	// justify-content: center;
 
 	&__info {
 		display: flex;
@@ -20,5 +16,82 @@
 		font-style: normal;
 		font-weight: 700;
 		letter-spacing: -3px;
+		max-width: 920px;
+	}
+	&__subtitle p {
+		margin-top: 24px;
+		font-family: 'Helvetica Neue';
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 400;
+		letter-spacing: -0.24px;
+		position: relative;
+	}
+	.subtitle-border {
+		position: absolute;
+	}
+	.img-block {
+		margin-top: 50px;
+		background-image: var(--bg-url);
+		background-repeat: no-repeat;
+		background-size: 100%, cover;
+		min-height: 805px;
+		position: relative;
+		background-size: auto;
+		background-position: center center;
+		&__queues {
+			display: flex;
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			column-gap: 10px;
+		}
+		&__queue {
+			border-radius: 5px;
+			background: rgba(0, 0, 0, 0.6);
+			backdrop-filter: blur(10px);
+			display: flex;
+			padding: 5px 13px;
+			justify-content: center;
+			align-items: center;
+			gap: 8px;
+			font-family: 'TT Travels';
+			font-size: 1rem;
+			font-style: normal;
+			font-weight: 500;
+			letter-spacing: -0.32px;
+			color: $white;
+
+			.text-green {
+				color: $green;
+				font-size: inherit;
+			}
+		}
+	}
+	.winner {
+		display: flex;
+		padding: 16px 12px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+		position: absolute;
+		border-radius: 5px;
+		background: $white;
+		z-index: 10;
+		right: 20px;
+		top: -20px;
+
+		&__text {
+			text-align: center;
+			font-family: 'TT Travels';
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 110%;
+			letter-spacing: -0.64px;
+			max-width: 170px;
+		}
 	}
 }

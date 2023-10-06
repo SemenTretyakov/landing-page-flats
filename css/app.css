@@ -112,17 +112,17 @@ legend {
 @font-face {
   font-family: "TT Travels";
   font-weight: 500;
-  src: url("../../assets/fonts/TT-Travels-Next-Medium.woff"), url("../../assets/fonts/TT-Travels-Next-Medium.woff2");
+  src: url("../../assets/fonts/TTTravels-Medium.woff"), url("../../assets/fonts/TTTravels-Medium.woff2");
 }
 @font-face {
   font-family: "TT Travels";
   font-weight: 600;
-  src: url("../../assets/fonts/TT-Travels-Next-DemiBold.woff"), url("../../assets/fonts/TT-Travels-Next-DemiBold.woff2");
+  src: url("../../assets/fonts/TTTravels-DemiBold.woff"), url("../../assets/fonts/TTTravels-DemiBold.woff2");
 }
 @font-face {
   font-family: "TT Travels";
   font-weight: 700;
-  src: url("../../assets/fonts/TT-Travels-Next-Bold.woff"), url("../../assets/fonts/TT-Travels-Next-Bold.woff2");
+  src: url("../../assets/fonts/TTTravels-Bold.woff"), url("../../assets/fonts/TTTravels-Bold.woff2");
 }
 @font-face {
   font-family: "Helvetica Neue";
@@ -152,6 +152,161 @@ legend {
   font-style: normal;
   font-weight: 700;
   letter-spacing: -3px;
+  max-width: 920px;
+}
+.hero-section__subtitle p {
+  margin-top: 24px;
+  font-family: "Helvetica Neue";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.24px;
+  position: relative;
+}
+.hero-section .subtitle-border {
+  position: absolute;
+}
+.hero-section .img-block {
+  margin-top: 50px;
+  background-image: var(--bg-url);
+  background-repeat: no-repeat;
+  background-size: 100%, cover;
+  min-height: 805px;
+  position: relative;
+  background-size: auto;
+  background-position: center center;
+}
+.hero-section .img-block__queues {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.hero-section .img-block__queue {
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: flex;
+  padding: 5px 13px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-family: "TT Travels";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.32px;
+  color: #fff;
+}
+.hero-section .img-block__queue .text-green {
+  color: #a0a747;
+  font-size: inherit;
+}
+.hero-section .winner {
+  display: flex;
+  padding: 16px 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  border-radius: 5px;
+  background: #fff;
+  z-index: 10;
+  right: 20px;
+  top: -20px;
+}
+.hero-section .winner__text {
+  text-align: center;
+  font-family: "TT Travels";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: -0.64px;
+  max-width: 170px;
+}
+
+.gallery {
+  margin-top: 80px;
+}
+.gallery__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+.gallery .card1 {
+  background-image: var(--bg-url1);
+  background-repeat: no-repeat;
+  background-size: 100%, cover;
+  height: 320px;
+  border-radius: 12px;
+  position: relative;
+}
+.gallery .card2 {
+  background-image: var(--bg-url2);
+  background-repeat: no-repeat;
+  background-size: 100%, cover;
+  height: 320px;
+  border-radius: 12px;
+  position: relative;
+}
+.gallery .card3 {
+  background-image: var(--bg-url3);
+  background-repeat: no-repeat;
+  background-size: 100%, cover;
+  height: 320px;
+  border-radius: 12px;
+  position: relative;
+}
+.gallery .card4 {
+  background-image: var(--bg-url4);
+  background-repeat: no-repeat;
+  background-size: 100%, cover;
+  height: 320px;
+  border-radius: 12px;
+  position: relative;
+}
+.gallery .card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 3px;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: #fff;
+}
+.gallery .card-info__text {
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  display: flex;
+  padding: 6px 10px;
+  align-items: flex-start;
+  gap: 10px;
+}
+.gallery .card-info__text-big {
+  font-family: "TT Travels";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.56px;
+}
+.gallery .card-info__text-small {
+  font-family: "Helvetica Neue";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.2px;
 }
 
 .header {
@@ -211,4 +366,14 @@ legend {
 .container-big {
   max-width: 1800px;
   padding: 20px 60px 0;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #faf8f5;
 }
