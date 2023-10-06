@@ -1,0 +1,24 @@
+.hero-section {
+	margin-top: 65px;
+	// display: flex;
+	// flex-direction: column;
+	// align-items: center;
+	// justify-content: center;
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	&__title {
+		margin-top: 1rem;
+		text-wrap: wrap;
+		text-align: center;
+		font-family: 'TT Travels';
+		font-size: 64px;
+		font-style: normal;
+		font-weight: 700;
+		letter-spacing: -3px;
+	}
+}
